@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int  addition (int x,int y)
+{
+    return x+y;
+}
+
+int  subtraction (int x,int y)
+{
+    return x-y;
+}
+
+int  multiplication(int x,int y)
+{
+    return x*y;
+}
+
+int  division (int x,int y)
+{
+    return x/y;
+}
+
+int   main()
+{
+    printf("1.add\n2.sub\n3.multi\n4.division\n");
+    printf ("enter you choice :");
+    int choice;
+    scanf("%d",&choice);
+    printf("enter the value of a and b : ");
+    int a,b,result;
+    scanf("%d%d", &a,&b);
+    switch(choice)
+    {
+    case 1:
+         result = addition(a,b);
+        printf("result: %d", result);
+        break;
+    case 2:
+        result = subtraction(a,b);
+        printf("result: %d", result);
+        break;
+
+     case 3:
+        result = multiplication(a,b);
+        printf("result: %d", result);
+        break;
+
+      case 4:
+        result = division(a,b);
+        printf("result: %d", result);
+        break;
+
+    default:
+        printf("invalid");
+
+    }
+    return 0;
+}
